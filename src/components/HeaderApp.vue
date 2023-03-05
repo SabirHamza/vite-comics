@@ -1,42 +1,12 @@
 <script>
 
-import HeaderLinksApp from './HeaderLinksApp.vue';
+import HeaderLinksApp from './links/HeaderLinksApp.vue';
+import { store } from '../data/store'
 
 export default {
     data() {
         return {
-            links: [
-                {
-                    name: 'CHARACTERS'
-                },
-                {
-                    name: 'COMICS'
-                },
-                {
-                    name: 'MOVIE'
-                },
-                {
-                    name: 'TV'
-                },
-                {
-                    name: 'GAMES'
-                },
-                {
-                    name: 'COLECTIBLES'
-                },
-                {
-                    name: 'VIDEOS'
-                },
-                {
-                    name: 'FANS'
-                },
-                {
-                    name: 'NEWS'
-                },
-                {
-                    name: 'SHOP'
-                },
-            ]
+            store
         }
     },
 
@@ -52,7 +22,7 @@ export default {
                     <img class="" src="../assets/img/dc-logo.png" alt="">
                 </div>
                 <div class="col-auto">
-                    <HeaderLinksApp :navlinks="links" />
+                    <HeaderLinksApp :navlinks="store.DcComicsLinks" />
                 </div>
             </div>
         </div>

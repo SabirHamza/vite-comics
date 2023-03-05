@@ -13,7 +13,7 @@ export default {
 
 <template>
     <a v-for="link in navlinks" class="px-2" href="#">
-        {{ link.name }}
+        {{ link.name.toUpperCase() }}
     </a>
 </template>
 
